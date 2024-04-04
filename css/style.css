@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  padding: 80px 110px;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Roboto", sans-serif;
+  color: #2f3c7e;
+  background-color: #fbeaeb;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 74px;
+  font-size: 48px;
+  line-height: 52px;
+  font-weight: 600;
+}
+
+.accordeon {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.accordeon-item {
+  margin-bottom: 15px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.accordeon-item:last-child {
+  margin-bottom: 0;
+}
+
+.accordeon-item-title {
+  position: relative;
+  padding: 30px 170px 30px 80px;
+  font-size: 36px;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.accordeon-item-title::after {
+  position: absolute;
+  content: "";
+  top: 50px;
+  right: 80px;
+  width: 30px;
+  height: 4px;
+  background-color: #2f3c7e;
+}
+
+.accordeon-item-title::before {
+  position: absolute;
+  content: "";
+  top: 37px;
+  right: 92px;
+  width: 4px;
+  height: 30px;
+  background-color: #2f3c7e;
+}
+
+.accordeon-item-content {
+  display: none;
+  padding: 50px 80px;
+  font-size: 28px;
+  line-height: 36px;
+}
+
+.accordeon-item-content p {
+  margin: 0;
+}
+
+.accordeon-item--open {
+  color: #fff;
+  background-color: #2f3c7e;
+}
+
+.accordeon-item--open .accordeon-item-title {
+  border-bottom: 2px solid currentColor;
+}
+
+.accordeon-item--open .accordeon-item-title::after {
+  background-color: white;
+}
+
+.accordeon-item--open .accordeon-item-title::before {
+  content: none;
+}
+
+
+.accordeon-item--open .accordeon-item-content {
+  display: block;
+}
